@@ -5,12 +5,18 @@ text-align: center; margin: 10%;}
 border: 2px ridge #242121;
 margin: 20%;
 }
-button{
-text-align: center;
-}
 #csv{
 margin: 40%;
 }
 .navbar-brand{
 color: aliceblue;
+}
+#generate{
+    margin: 50%;
+}
+form{
+    text-align: center;
+}
+h3{
+    text-align: center;
 }

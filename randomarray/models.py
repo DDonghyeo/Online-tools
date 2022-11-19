@@ -4,5 +4,4 @@ from django.db import models
 
 class Genearate(models.Model):
     min = models.TextField()
-    max
-    
+        

@@ -7,20 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="static/style.css" rel="stylesheet" type="text/css">
     <style>
-    #main{text-align: center; margin: 10%;}
-    #result{
-    /* border: 2px ridge #242121; */
-    margin: 20%;
-        }
-    button{
-    text-align: center;
-    }
-    #csv{
-    margin: 40%;
-    }
-    .navbar-brand{
-    color: aliceblue;
-    }
+    
     </style>
   </head>
   <body>
@@ -30,30 +17,29 @@
       </div>
     </nav>
     
-    <h1 id="main">RandArrayGenerator</h1>
-    <form action="" style="text-align:center">
-      최소 : 
-      <input type="text" disabled>
-      최대 : 
-      <input type="text">
-      생성할 개수 : 
-      <input type="text">
-      타입 : 
-      <select name="type">
-
-        <option value="int" selected> 정수</option>
-    
-        <option value="strin"> 문자열 </option>
-    </select>
-      구분 : 
-      <select name="separate">
-
-        <option value="comma" selected>콤마(,)</option>
-    
-        <option value="space"> 띄어쓰기 </option>
-    </select>
-
-      <button>Genearate</button>
+    <h1 id="main">Random Array Generator</h1>
+    <form action="" method="post">
+      <h3>최소 : </h3>
+      <input name="min" type="text" placeholder="min" >
+      <h3>최대 : </h3>
+      <input name="max" type="text" placeholder="max" >
+      <h3>생성할 개수 : </h3>
+      <p>
+        <input name="type" type="text" placeholder="amount">
+        <h3>타입 : </h3>
+        <select name="type">
+          <option value="int" selected> 정수</option>
+          <option value="str"> 문자열 </option>
+        </select>
+        <h3>구분 : </h3>
+        <select name="separate">
+          <option value="comma" selected>콤마(,)</option>
+          <option value="space"> 띄어쓰기 </option>
+        </select>
+      </p>
+      <div>
+        <button id="generate">Genearate</button>
+      </div>
     </form>
     <div>
       <h2 style="text-align: center; margin:60px;">result</h2>
