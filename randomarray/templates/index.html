@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Random Array Genearator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="/static/style.css" rel="stylesheet" type="text/css">
+    <style>
+    #main{text-align: center; margin: 10%;}
+    #result{
+    /* border: 2px ridge #242121; */
+    margin: 20%;
+        }
+    button{
+    text-align: center;
+    }
+    #csv{
+    margin: 40%;
+    }
+    .navbar-brand{
+    color: aliceblue;
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar sticky-top bg-dark">
+      <div class="container-fluid">
+        <a href = "./index.html"class="navbar-brand" href="#">Random Array Generator</a>
+      </div>
+    </nav>
+    
+    <h1 id="main">RandArrayGenerator</h1>
+    <form action="" style="text-align:center">
+      최소 : 
+      <input type="text" disabled>
+      최대 : 
+      <input type="text">
+      생성할 개수 : 
+      <input type="text">
+      타입 : 
+      <select name="type">
+
+        <option value="int" selected> 정수</option>
+    
+        <option value="strin"> 문자열 </option>
+    </select>
+      구분 : 
+      <select name="separate">
+
+        <option value="comma" selected>콤마(,)</option>
+    
+        <option value="space"> 띄어쓰기 </option>
+    </select>
+
+      <button>Genearate</button>
+    </form>
+    <div>
+      <h2 style="text-align: center; margin:60px;">result</h2>
+      <p style="text-align: center;" id="result">1,2,3,4</p>
+    </div>
+    <button id="csv" >CSV로 추출</button>
+  </body>
+</html>
