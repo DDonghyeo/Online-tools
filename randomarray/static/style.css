@@ -1,9 +1,10 @@
 
-#main{text-align: center; margin: 10%;}
+#main{
+text-align: center; margin: 10%;}
 #result{
 border: 2px ridge #242121;
 margin: 20%;
-    }
+}
 button{
 text-align: center;
 }
