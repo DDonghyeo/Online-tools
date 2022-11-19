@@ -2,18 +2,21 @@
 #main{
 text-align: center; margin: 10%;}
 #result{
-border: 2px ridge #242121;
-margin: 20%;
+    margin: 30px;
+    border: 3px solid #dddddd;
+    padding: 30px;
 }
 #csv{
-margin: 40%;
+
+}
+#result-text{
+    text-align: center;
+    margin: 20px;
 }
 .navbar-brand{
-color: aliceblue;
+    color: aliceblue;
 }
-#generate{
-    margin: 50%;
-}
+
 form{
     text-align: center;
 }

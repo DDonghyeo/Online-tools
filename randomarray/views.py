@@ -6,26 +6,24 @@ import random
 # Create your views here.
 @csrf_exempt
 def index(request):
+    if request.method == 'POST':
+        min = int(request.POST['min'])
+        max = int(request.POST['max'])
+        amount = int(request.POST['amount'])
+        type = request.POST['type']
+        separate = request.POST['separate']
+        result = generate(min, max, amount, separate, type)
+        print(result)
     return render(request, 'index.html')
 
 
 def generate(min, max, amount, separate, type):
-    result = []
+    result = ""
+    if separate == "comma":
+        sp = ","
+    elif separate == "space":
+        sp = " "
     if type == "int":
         for i in range(amount):
-            result.append(random.randint(min, max))
-    else:
-        return 0
+            result= result + str(random.randint(min, max)) + sp
     return result
-
-
-@csrf_exempt
-def create(request):
-    if request.method == 'POST':
-        min = request.POST['min']
-        max = request.POST['max']
-        amount = request.POST['amount']
-        type = request.POST['type']
-        separate = request.POST['separate']
-        print(min,max,amount,type,separate)
-    return render(request, 'index.html')
