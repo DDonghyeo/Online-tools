@@ -1,4 +1,3 @@
-
 #main{
 text-align: center; margin: 10%;}
 #result{
@@ -6,12 +5,18 @@ text-align: center; margin: 10%;}
     border: 3px solid #dddddd;
     padding: 30px;
 }
-#csv{
-
-}
 #result-text{
     text-align: center;
     margin: 20px;
+}
+#csv{
+    
+    width: 300px;
+    display: block;
+}
+#btnSubmit{
+    width:100px;
+    margin: 0 auto;
 }
 .navbar-brand{
     color: aliceblue;
