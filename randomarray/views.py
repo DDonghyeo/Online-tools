@@ -6,15 +6,16 @@ import random
 # Create your views here.
 @csrf_exempt
 def index(request):
+    global results
+    results = ""
     if request.method == 'POST':
         min = int(request.POST['min'])
         max = int(request.POST['max'])
         amount = int(request.POST['amount'])
         type = request.POST['type']
         separate = request.POST['separate']
-        result = generate(min, max, amount, separate, type)
-        print(result)
-    return render(request, 'index.html')
+        results = generate(min, max, amount, separate, type)
+    return render(request, 'index.html',{'result' : results})
 
 
 def generate(min, max, amount, separate, type):
@@ -26,4 +27,6 @@ def generate(min, max, amount, separate, type):
     if type == "int":
         for i in range(amount):
             result= result + str(random.randint(min, max)) + sp
+
+    result = result[:-1]
     return result
