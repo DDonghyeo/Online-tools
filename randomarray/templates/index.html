@@ -1,5 +1,5 @@
 <!doctype html>
-{%load static%}
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -11,7 +11,7 @@
   <body>
     <nav class="navbar sticky-top bg-dark">
       <div class="container-fluid">
-        <a href = "./index.html"class="navbar-brand" href="#">Random Array Generator</a>
+        <a href = "./"class="navbar-brand" href="#">Random Array Generator</a>
       </div>
     </nav>
     
@@ -26,8 +26,7 @@
         <input name="amount" type="text" placeholder="amount">
       </p>
       <p>
-        <input type="checkbox">
-        중복 허용(Duplicate allowed)
+        <input type="checkbox" name = "duplicate" checked> 중복 허용(Duplicate allowed)
       </p>
       <p>
         타입(type) :
@@ -38,19 +37,19 @@
         구분(separate) :
         <select name="separate">
           <option value="comma" selected>콤마(,)</option>
-          <option value="space"> 띄어쓰기( ) </option>
+          <option value="space"> 띄어쓰기( )</option>
         </select>
       </p>
         <button id="generate" >Genearate</button>
     </form>
     <div>
       <h2 id="result-text">result</h2>
-      <i  style="margin: 80%;">copy</i>
-      <p id="result">{{result}}</p>
+      <p id="result" style="white-space: normal;">{{result}}</p>
     </div>
     <div id="csv" style="margin: auto;">
       <button id="btnSubmit" style="display: block; margin: 0 auto;">CSV로 추출</button>
     </div>
     <script type="text/javascript" src="static/script.js"></script>
   </body>
+  <script type="text/javascript" src="/static/script.js"></script>
 </html>
