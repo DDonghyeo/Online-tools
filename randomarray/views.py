@@ -22,10 +22,8 @@ def index(request):
 
 def generate(min, max, amount, separate, type, duplicate):
     result = ""
-    
-
     if separate == "comma":
-        sp = ","
+        sp = ", "
     elif separate == "space":
         sp = " "
     

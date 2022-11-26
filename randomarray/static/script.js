@@ -1,6 +1,14 @@
 var duplicate = document.getElementById('min');
 duplicate.addEventListener('click', yes());
 
+var icon = document.getElementById('icon');
+icon.addEventListener('click', copy());
+
+function copy(){
+    alert('copied!')
+}
+
+
 window.onload = function yes(){
     alert('yes')
 };
