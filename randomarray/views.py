@@ -2,8 +2,6 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 import random
 
-
-# Create your views here.
 @csrf_exempt
 def index(request):
     global results
@@ -15,8 +13,7 @@ def index(request):
         type = request.POST['type']
         separate = request.POST['separate']
         duplicate = request.POST['duplicate']
-        print(duplicate)
-        results = generate(min, max, amount, separate, type,duplicate)
+        results = generate(min, max, amount, separate, type, duplicate)
     return render(request, 'index.html',{'result' : results})
 
 

@@ -1,20 +1,15 @@
+alert('no!')
 var duplicate = document.getElementById('min');
-duplicate.addEventListener('click', yes());
-
 var icon = document.getElementById('icon');
-icon.addEventListener('click', copy());
+var resut = document.getElementById('result');
 
 function copy(){
-    alert('copied!')
+    const copy = result => {
+        window.clipboardData.setData("text", text);
+      } 
+      
+      copy("IE 복사 테스트");
 }
-
-
-window.onload = function yes(){
-    alert('yes')
-};
-
-var main = document.getElementById('main');
-main.addEventListener('click', yes());
 
 function check(){
     print("yes")
