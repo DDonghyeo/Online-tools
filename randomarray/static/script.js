@@ -3,13 +3,22 @@ var icon = document.getElementById('icon')
 var result = document.getElementById('result')
 var btn = document.getElementById('generate')
 var form = document.getElementsByName('min')
+var copybtn = document.getElementById("copy")
+console.log(copybtn)
 
-function copy(){
-    const copy = result => {
-        window.clipboardData.setData("text", text);
-      } 
-      copy("IE 복사 테스트");
-}
+copybtn.addEventListener("click",copy)
+
+function copy() {
+    var obj = document.getElementById("result");
+    var range = document.createRange();
+    range.selectNode(obj.childNodes[0]);  //텍스트 정보를 Range 객체에 저장
+    var sel = window.getSelection();
+    sel.removeAllRanges();  //기존 선택정보 삭제
+    sel.addRange(range);  //텍스트 정보 선택
+    document.execCommand("copy");  //복사
+    sel.removeRange(range);  //선택 정보 삭제
+    alert("copied!")
+  }
 
 function check(){
     print("yes")
@@ -27,4 +36,6 @@ function check(){
 
     }
 }
+
+
 

@@ -7,7 +7,6 @@
     <title>Random Array Genearator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="/static/style.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" rel="javascript" src="/static/script.js"></script>
     <link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   </head>
   <body>
@@ -49,33 +48,12 @@
       <h2 id="result-text">result</h2>
       <div class = "content" style="margin-left: 1000px ;">
         <button type="button" class="btn btn-primary btn-sm" id="csvbtn">CSV로 추출</button>
-        
-        
-        {% comment %} <button type="button" class="btn btn-primary btn-sm" id = "icon ">
+        <button type="button" class="btn btn-primary btn-sm" id = "copy" value = "copy">
           <i class="fa-solid fa-copy fa-lg" ></i> copy
-        </button> {% endcomment %}
-
-        <input type="button" value="copy" onclick="copy3()"/>
-
+        </button>
       </div>
-
       <p id="result" style="width:90%; ">{{result}}</p>
-        <script>
-          function copy3() {
-            var obj = document.getElementById("result");
-            var range = document.createRange();
-            range.selectNode(obj.childNodes[0]);  //텍스트 정보를 Range 객체에 저장
-            var sel = window.getSelection();
-            sel.removeAllRanges();  //기존 선택정보 삭제
-            sel.addRange(range);  //텍스트 정보 선택
-            document.execCommand("copy");  //복사
-            sel.removeRange(range);  //선택 정보 삭제
-          }
-        </script>
-
-      {% comment %} <p id="result">{{result}}</p> {% endcomment %}
-    
-    
     </div>
   </body>
+  <script type="text/javascript" rel="javascript" src="/static/script.js"></script>
 </html>

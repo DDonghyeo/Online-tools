@@ -12,7 +12,6 @@ def index(request):
         amount = int(request.POST['amount'])
         type = request.POST['type']
         separate = request.POST['separate']
-        print(request.POST.get('duplicate'))
         if (request.POST.get('duplicate') == None):
             duplicate = "off"
         else:
@@ -42,9 +41,6 @@ def generate(min, max, amount, separate, type, duplicate):
                 rand = random.randint(0,len(array)-1)
                 result = result + str(array[rand]) + sp
                 array.pop(rand)
-                print(array)
     #마지막 구분 빼기
-    print(result)
     result = result[:-2]
-    print(result)
     return result
