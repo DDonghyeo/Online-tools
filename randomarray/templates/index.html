@@ -15,19 +15,18 @@
         <a href = "./"class="navbar-brand" href="#">Random Array Generator</a>
       </div>
     </nav>
-    
     <h1 id="main">Random Array Generator</h1>
     <form action="" method="post" id="form">
       <p>
         최소(min) :
-        <input  name="min" type="text" placeholder="min" >
+        <input id="min" name="min" type="text" placeholder="min">
         최대(max) :
-        <input name="max" type="text" placeholder="max" >
+        <input id="max" name="max" type="text" placeholder="max" >
         생성할 개수(amount) : 
-        <input name="amount" type="text" placeholder="amount">
+        <input id="amount" name="amount" type="text" placeholder="amount">
       </p>
       <p>
-        <input type="checkbox" name = "duplicate" checked> 중복 허용(Duplicate allowed)
+        <input type="checkbox" name = "duplicate" id = "checkbox" checked> 중복 허용(Duplicate allowed)
       </p>
       <p>
         타입(type) :
@@ -41,11 +40,12 @@
           <option value="comma" selected>콤마(,)</option>
           <option value="space"> 띄어쓰기( )</option>
         </select>
+        <p id="warning" style="display: none; color: lightcoral;" >warning</p>
       </p>
-        <button class="btn btn-primary btn-sm" id="generate" >Genearate!</button>
+        <button class="btn btn-primary btn-sm" id="generate" disabled>Genearate!</button>
     </form>
     <div>
-      <h2 id="result-text">result</h2>
+      <h2 id="result-text">Result</h2>
       <div class = "content" style="margin-left: 1000px ;">
         <button type="button" class="btn btn-primary btn-sm" id="csvbtn">CSV로 추출</button>
         <button type="button" class="btn btn-primary btn-sm" id = "copy" value = "copy">

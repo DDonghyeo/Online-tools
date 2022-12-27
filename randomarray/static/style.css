@@ -34,6 +34,11 @@ text-align: center; margin: 10%;
     margin: 0 auto;
 }
 
+#warning{
+    text-align: center;
+    color: red;
+}
+
 .navbar-brand{
     color: aliceblue;
 }
