@@ -1,13 +1,13 @@
-alert('no!')
-var duplicate = document.getElementById('min');
-var icon = document.getElementById('icon');
-var resut = document.getElementById('result');
+var duplicate = document.getElementById('min')
+var icon = document.getElementById('icon')
+var result = document.getElementById('result')
+var btn = document.getElementById('generate')
+var form = document.getElementsByName('min')
 
 function copy(){
     const copy = result => {
         window.clipboardData.setData("text", text);
       } 
-      
       copy("IE 복사 테스트");
 }
 

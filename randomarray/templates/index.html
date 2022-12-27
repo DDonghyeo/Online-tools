@@ -18,13 +18,13 @@
     </nav>
     
     <h1 id="main">Random Array Generator</h1>
-    <form action="" method="post">
+    <form action="" method="post" id="form">
       <p>
         최소(min) :
-        <input   type="text" placeholder="min" >
+        <input  name="min" type="text" placeholder="min" >
         최대(max) :
         <input name="max" type="text" placeholder="max" >
-        생성할 개수(amount) :
+        생성할 개수(amount) : 
         <input name="amount" type="text" placeholder="amount">
       </p>
       <p>
@@ -43,20 +43,17 @@
           <option value="space"> 띄어쓰기( )</option>
         </select>
       </p>
-        <button id="generate" >Genearate</button>
+        <button class="btn btn-primary btn-sm" id="generate" >Genearate!</button>
     </form>
     <div>
       <h2 id="result-text">result</h2>
       <div class = "content" style="margin-left: 1000px ;">
-        <button id = "icon " style="display: block; margin:0 auto;" >
+        <button type="button" class="btn btn-primary btn-sm" id="csvbtn">CSV로 추출</button>
+        <button type="button" class="btn btn-primary btn-sm" id = "icon ">
           <i class="fa-solid fa-copy fa-lg" ></i> copy
         </button>
       </div>
       <p id="result">{{result}}</p>
     </div>
-    <div id="csv" style="margin: auto;">
-      <button id="btnSubmit" style="display: block; margin: 0 auto;">CSV로 추출</button>
-    </div>
   </body>
-  
 </html>

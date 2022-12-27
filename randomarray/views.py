@@ -12,7 +12,11 @@ def index(request):
         amount = int(request.POST['amount'])
         type = request.POST['type']
         separate = request.POST['separate']
-        duplicate = request.POST['duplicate']
+        print(request.POST.get('duplicate'))
+        if (request.POST.get('duplicate') == None):
+            duplicate = "off"
+        else:
+            duplicate = request.POST['duplicate']
         results = generate(min, max, amount, separate, type, duplicate)
     return render(request, 'index.html',{'result' : results})
 
@@ -23,8 +27,7 @@ def generate(min, max, amount, separate, type, duplicate):
         sp = ", "
     elif separate == "space":
         sp = " "
-    
-    
+
     if (type == "int") :
         #중복 허용
         if duplicate == "on":
@@ -34,10 +37,14 @@ def generate(min, max, amount, separate, type, duplicate):
         if duplicate == "off":
             array = []
             for i in range(max):
-                array.append(str(i))
+                array.append(str(min+i))
             for i in range(amount):
-                result = result + str(array[random.randint(0,len(array))]) + sp
-                array = ''.join(array).split()
+                rand = random.randint(0,len(array)-1)
+                result = result + str(array[rand]) + sp
+                array.pop(rand)
+                print(array)
     #마지막 구분 빼기
-    result = result[:-1]
+    print(result)
+    result = result[:-2]
+    print(result)
     return result
