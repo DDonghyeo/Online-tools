@@ -5,5 +5,6 @@ from randomarray import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('randomarray/',views.generator)
+    path('randomarray/',views.generator),
+    path('binaryconverter/',views.converter)
 ]

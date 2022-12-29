@@ -96,9 +96,3 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
 });
-
-function popup(){
-    window.open("popup.html","copied",width=400, height=300)
-}
-
-

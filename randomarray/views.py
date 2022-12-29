@@ -48,3 +48,7 @@ def generate(min, max, amount, separate, type, duplicate):
     #마지막 구분 빼기
     result = result[:-2]
     return result
+    
+@csrf_exempt
+def converter(request):
+    return render(request, 'converter.html')
