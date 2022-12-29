@@ -4,6 +4,10 @@ import random
 
 @csrf_exempt
 def index(request):
+    return render(request, 'index.html')
+
+@csrf_exempt
+def generator(request):
     global results
     results = ""
     if request.method == 'POST':
@@ -17,7 +21,7 @@ def index(request):
         else:
             duplicate = request.POST['duplicate']
         results = generate(min, max, amount, separate, type, duplicate)
-    return render(request, 'index.html',{'result' : results})
+    return render(request, 'generator.html',{'result' : results})
 
 
 def generate(min, max, amount, separate, type, duplicate):
