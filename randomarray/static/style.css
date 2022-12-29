@@ -11714,7 +11714,8 @@ body {
 }
 
 #main{
-text-align: center; margin: 8%;
+text-align: center; 
+margin: 4%;
 }
 
 #result{
@@ -11727,6 +11728,7 @@ text-align: center; margin: 8%;
 #result-text{
     text-align: center;
     margin: 10px;
+    padding-top: 20px;
 }
 
 #btnSubmit{
@@ -11789,7 +11791,7 @@ form{
 #generatorcheckbox{
   margin: 0 auto; 
   padding: 0;
-  padding-left: 40%;
+  padding-left: 43%;
   padding-top: 20px;
 }
 

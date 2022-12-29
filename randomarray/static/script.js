@@ -38,7 +38,7 @@ function check(){
     if (!document.getElementById('checkbox').checked){
         if (( max - min + 1 )<amount){
             generate.disabled = true;
-            warning.innerHTML = "범위만큼 생성할 수 없습니다.";
+            warning.innerHTML = "Can't generate in range.";
             warning.style.display = "block";
             return
         }
@@ -51,7 +51,7 @@ function check(){
     //최소값이 최대값보다 클 경우
     if(min>max){
         generate.disabled = true;
-        warning.innerHTML = "최소값이 최대값보다 큽니다."
+        warning.innerHTML = "min value is larger than max value."
         warning.style.display = "block"
         return
     }else {
@@ -62,7 +62,7 @@ function check(){
      //정수가 아닌 값이 입력됐을 경우
      if (!isInt(min) || !isInt(max) || !isInt(amount)){
         generate.disabled = true;
-        warning.innerHTML = "정수만 입력 가능합니다."
+        warning.innerHTML = "Only integer is allowed."
         warning.style.display = "block"
         return
     }else {
@@ -73,7 +73,7 @@ function check(){
     //아무 값을 입력하지 않았을 경우
     if (min == "" || max == "" || amount == "" || !isInt(min) || !isInt(max) || !isInt(amount)){
         generate.disabled = true;
-        warning.innerHTML = "값을 입력해야 합니다."
+        warning.innerHTML = "Input the value."
         warning.style.display = "block"
     }else {
         generate.disabled = false;
