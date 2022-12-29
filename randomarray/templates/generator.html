@@ -20,32 +20,38 @@
               <main>
                 <h1 id="main">Random Array Generator</h1>
                 <form action="" method="post" id="form">
-                  <p>
-                    최소(min) :  
-                    <input id="min" name="min" type="text" placeholder="min">
-                    최대(max) :  
-                    <input id="max" name="max" type="text" placeholder="max" >
-                    생성할 개수(amount) :  
-                    <input id="amount" name="amount" type="text" placeholder="amount">
-                    </p>
-                    <p>
-                      <input type="checkbox" name = "duplicate" id = "checkbox" checked> 중복 허용(Duplicate allowed)
-                    </p>
-                    <p>
-                      타입(type) :
-                      <select name="type">
+                  <div id="generatorinput">
+                    <div class="input-group input-group-sm mb-3">
+                      <span class="input-group-text" id="inputGroup-sizing-sm">최소</span>
+                      <input id="min" name="min" type="text" placeholder="min" class="form-control">
+                      <span class="input-group-text" id="inputGroup-sizing-sm" style="margin-left: 50px;">최대</span>
+                      <input id="max" name="max" type="text" placeholder="max" class="form-control" >
+                      <span class="input-group-text" id="inputGroup-sizing-sm"style="margin-left: 50px;">생성할 개수</span>
+                      <input id="amount" name="amount" type="text" placeholder="amount" class="form-control">
+                    </div>
+                  </div>
+                  <div id="generatorcheckbox" class="input-group mb-3">
+                    <div class="input-group-text">
+                      <input class="form-check-input mt-0" type="checkbox" name = "duplicate" id = "checkbox"checked> 중복 허용(Duplicate allowed)
+                    </div>
+                  </div>
+                  <div id="generatorselect" class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">타입(Type)</label>
+                      <select class="form-select" name="type">
                         <option value="int" selected> 정수(int)</option>
                       </select>
-                    </p>
-                    <p>
-                      구분(separate) :
-                      <select name="separate">
+                  </div>
+                  <div id="generatorselect" class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">구분(separate)</label>
+                      <select class="form-select" name="separate">
                         <option value="comma" selected>콤마(,)</option>
                         <option value="space"> 띄어쓰기( )</option>
                       </select>
-                      <p id="warning" style="display: none; color: lightcoral;" >warning</p>
-                    </p>
-                  <button class="btn btn-primary btn-sm" id="generate" disabled>Genearate!</button>
+                  </div>
+                  <p id="warning" style="display: none; color: lightcoral;" >warning</p>
+                  <div id="btngenerate">
+                    <button class="btn btn-primary btn-sm" id="generate" disabled>Genearate!</button>
+                  </div>
                 </form>
               <div>
                 <h2 id="result-text">Result</h2>

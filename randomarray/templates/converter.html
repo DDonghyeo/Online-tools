@@ -20,53 +20,65 @@
               <main>
                 <h1 id="main">Binary Converter</h1>
                 <form action="" method="post" id="form">
-                    <div>
-                        <input id="before" name="before" type="text" placeholder="before">
-                        <i class="fa-solid fa-right-long"></i>
-                        <input id="after" name="after" type="text" placeholder="after">
+                  <div id="convertinput" class="row">
+                    <div class="col">
+                      <input type="text" class="form-control" id="before" name="before" placeholder="before">
                     </div>
-                    <div id="convertselect">
-                        <select name="before">
-                            <option value="2" selected>2진수</option>
-                            <option value="2" >4진수</option>
-                            <option value="2" >5진수</option>
-                            <option value="2" >6진수</option>
-                            <option value="2" >7진수</option>
-                            <option value="2" >8진수</option>
-                            <option value="2" >9진수</option>
-                            <option value="2" >10진수</option>
-                            <option value="2" >11진수</option>
-                            <option value="2" >12진수</option>
-                            <option value="2" >13진수</option>
-                            <option value="2" >14진수</option>
-                            <option value="2" >15진수</option>
-                            <option value="2" >16진수</option>        
-                          </select>
-                          <i class="fa-solid fa-right-long"></i>
-                          <select name="after">
-                            <option value="2" >2진수</option>
-                            <option value="2" >4진수</option>
-                            <option value="2" >5진수</option>
-                            <option value="2" >6진수</option>
-                            <option value="2" >7진수</option>
-                            <option value="2" >8진수</option>
-                            <option value="2" >9진수</option>
-                            <option value="2" selected>10진수</option>
-                            <option value="2" >11진수</option>
-                            <option value="2" >12진수</option>
-                            <option value="2" >13진수</option>
-                            <option value="2" >14진수</option>
-                            <option value="2" >15진수</option>
-                            <option value="2" >16진수</option>        
-                          </select>
-                    </div>                
+                    <div class="col">
+                      <i class="fa-solid fa-right-long"></i>
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" id="after" name="after" placeholder="after">
+                    </div>
+                  </div>
+                  <div id="convertinput" class="row" style="margin-top: 50px;">
+                    <div class="col">
+                      <select class="form-select" name="before">
+                        <option value="2" selected>2진수</option>
+                        <option value="2" >4진수</option>
+                        <option value="2" >5진수</option>
+                        <option value="2" >6진수</option>
+                        <option value="2" >7진수</option>
+                        <option value="2" >8진수</option>
+                        <option value="2" >9진수</option>
+                        <option value="2" >10진수</option>
+                        <option value="2" >11진수</option>
+                        <option value="2" >12진수</option>
+                        <option value="2" >13진수</option>
+                        <option value="2" >14진수</option>
+                        <option value="2" >15진수</option>
+                        <option value="2" >16진수</option>        
+                      </select>
+                    </div>
+                    <div class="col">
+                      <i class="fa-solid fa-right-long"></i>
+                    </div>
+                    <div class="col">
+                      <select class="form-select" name="after">
+                        <option value="2" >2진수</option>
+                        <option value="2" >4진수</option>
+                        <option value="2" >5진수</option>
+                        <option value="2" >6진수</option>
+                        <option value="2" >7진수</option>
+                        <option value="2" >8진수</option>
+                        <option value="2" >9진수</option>
+                        <option value="2" selected>10진수</option>
+                        <option value="2" >11진수</option>
+                        <option value="2" >12진수</option>
+                        <option value="2" >13진수</option>
+                        <option value="2" >14진수</option>
+                        <option value="2" >15진수</option>
+                        <option value="2" >16진수</option>        
+                      </select>
+                    </div>
+                  </div>          
                 </form>
                 <div id="convertbutton">
                     <button class="btn btn-primary btn-sm" id="btnconvert" disabled>covert!</button>
                 </div>
             
               <div>
-                <h2 id="result-text">Result</h2>
+                <h2 id="result-text" style="margin-top: 50px;">Result</h2>
                 <div class = "content" style="margin-left: 700px ;">
                   <button type="button" class="btn btn-primary btn-sm" id = "copy" value = "copy">
                     <i class="fa-solid fa-copy fa-lg" ></i> copy

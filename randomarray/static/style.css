@@ -11760,6 +11760,7 @@ form{
 #btnconvert{
   display: block;
   margin: 0 auto;
+  font-size: larger;
 }
 
 #convertbutton{
@@ -11777,4 +11778,34 @@ form{
   padding: 20px;
   word-wrap: break-word;
   margin-left: 400px;
+}
+
+#generatorinput{
+  margin: 0 auto; 
+  padding:0; 
+  width: 800px;
+}
+
+#generatorcheckbox{
+  margin: 0 auto; 
+  padding: 0;
+  padding-left: 40%;
+  padding-top: 20px;
+}
+
+#generatorselect{
+  margin: 0 auto; 
+  padding: 0;
+  padding-left: 40%;
+  padding-right: 40%;
+}
+
+#btngenerate{
+  padding-top: 20px;
+}
+
+#convertinput{
+  margin: 0 auto;
+  padding-left: 400px;
+  padding-right: 400px;
 }
