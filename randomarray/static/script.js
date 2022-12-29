@@ -19,7 +19,7 @@ function copy() {
     sel.addRange(range);  //텍스트 정보 선택
     document.execCommand("copy");  //복사
     sel.removeRange(range);  //선택 정보 삭제
-    popup();
+    alert("copied!");
   }
 
 function isInt(num){
