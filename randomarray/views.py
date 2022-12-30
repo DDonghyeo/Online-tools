@@ -51,4 +51,21 @@ def generate(min, max, amount, separate, type, duplicate):
     
 @csrf_exempt
 def converter(request):
+    if request.method == 'POST':
+        # 10 진수 -> x 진수 
+        if int(request.POST['before']) == 10:
+            result = convert(int(request.POST['beforeNum']), int(request.POST['after']))
+        else:
+            # x 진수 -> y 진수의 경우
+            first = convert(int(request.POST['beforeNum']), 10) # x 진수 -> 10 진수 
+            result = convert(first, int(request.POST['after'])) # 10 진수 -> y 진수
     return render(request, 'converter.html')
+
+def convert(n, q):
+    r = ''
+    
+    while n > 0:
+        n, mod = divmod(n, q)
+        r += str(mod)
+        
+    return r[::-1]
