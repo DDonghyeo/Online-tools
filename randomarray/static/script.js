@@ -42,9 +42,9 @@ function isInt(num){
 
 
 function check(){
-    var min = document.getElementById('min').value
-    var max = document.getElementById('max').value
-    var amount = document.getElementById('amount').value
+    var min = parseInt(document.getElementById('min').value)
+    var max = parseInt(document.getElementById('max').value)
+    var amount = parseInt(document.getElementById('amount').value)
     var generate = document.getElementById('generate');
     var warning = document.getElementById('warning')
 
@@ -64,6 +64,8 @@ function check(){
 
     //최소값이 최대값보다 클 경우
     if(min>max){
+        console.log(min, max)
+        console.log(Number.isInteger(min))
         generate.disabled = true;
         warning.innerHTML = "min value is larger than max value."
         warning.style.display = "block"
