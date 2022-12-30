@@ -21,7 +21,8 @@ def generator(request):
         else:
             duplicate = request.POST['duplicate']
         results = generate(min, max, amount, separate, type, duplicate)
-    return render(request, 'generator.html',{'result' : results})
+        return render(request, 'generator.html',{'result' : results, 'min' : min, 'max' : max, 'amount' : amount, 'duplicate' : duplicate, 'seperate' : separate})
+    return render(request, 'generator.html')
 
 
 def generate(min, max, amount, separate, type, duplicate):

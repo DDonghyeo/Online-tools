@@ -23,16 +23,17 @@
                   <div id="generatorinput">
                     <div class="input-group input-group-sm mb-3">
                       <span class="input-group-text" id="inputGroup-sizing-sm">min</span>
-                      <input id="min" name="min" type="text" placeholder="min" class="form-control">
+                      <input id="min" name="min" type="text" placeholder="min" class="form-control" value={{min}}>
                       <span class="input-group-text" id="inputGroup-sizing-sm" style="margin-left: 50px;">max</span>
-                      <input id="max" name="max" type="text" placeholder="max" class="form-control" >
-                      <span class="input-group-text" id="inputGroup-sizing-sm"style="margin-left: 50px;">amount</span>
-                      <input id="amount" name="amount" type="text" placeholder="amount" class="form-control">
+                      <input id="max" name="max" type="text" placeholder="max" class="form-control" value = {{max}}>
+                      <span class="input-group-text" id="inputGroup-sizing-sm"style="margin-left: 50px;" >amount</span>
+                      <input id="amount" name="amount" type="text" placeholder="amount" class="form-control" value = {{amount}}>
                     </div>
                   </div>
                   <div id="generatorcheckbox" class="input-group mb-3">
                     <div class="input-group-text">
-                      <input class="form-check-input mt-0" type="checkbox" name = "duplicate" id = "checkbox"checked>Duplicate allow
+                      <p id="duch" style="display: none;">{{duplicate}}</p>
+                      <input class="form-check-input mt-0" type="checkbox" name = "duplicate" id = "checkbox" checked>Duplicate allow
                     </div>
                   </div>
                   <div id="generatorselect" class="input-group mb-3">
@@ -42,10 +43,11 @@
                       </select>
                   </div>
                   <div id="generatorselect" class="input-group mb-3">
+                    <p id="seperated" style="display: none;">{{seperate}}</p>
                     <label class="input-group-text" for="inputGroupSelect01">separate</label>
                       <select class="form-select" name="separate">
-                        <option value="comma" selected>comma(,)</option>
-                        <option value="space"> space( )</option>
+                        <option id="comma" value="comma" selected>comma(,)</option>
+                        <option id="space" value="space"> space( )</option>
                       </select>
                   </div>
                   <p id="warning" style="display: none; color: lightcoral;" >warning</p>

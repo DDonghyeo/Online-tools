@@ -1,17 +1,33 @@
 var before = document.getElementById("before")
+var copybtn = document.getElementById("copy")
+
+copybtn.addEventListener("click",copy)
 before.addEventListener("keyup",convertcheck);
 
 //진수변환기 유효성 검사
 function convertcheck(){
     var before = document.getElementById("before").value;
-    var after = document.getElementById("after").value;
     var btn = document.getElementById("btnconvert");
-    if(before == "" || after == ""){
+    if(before == ""){
         btn.disabled = true;
+        return
     }else btn.disabled = false;
+
+    
 }
 
 
+function copy() {
+    var obj = document.getElementById("result");
+    var range = document.createRange();
+    range.selectNode(obj.childNodes[0]);  //텍스트 정보를 Range 객체에 저장
+    var sel = window.getSelection();
+    sel.removeAllRanges();  //기존 선택정보 삭제
+    sel.addRange(range);  //텍스트 정보 선택
+    document.execCommand("copy");  //복사
+    sel.removeRange(range);  //선택 정보 삭제
+    alert("copied!");
+  }
 
 //side nav toggle
 window.addEventListener('DOMContentLoaded', event => {

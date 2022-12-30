@@ -10,6 +10,20 @@ max.addEventListener("keyup",check)
 amount.addEventListener("keyup",check)
 checkbox.addEventListener("click",check)
 
+
+//체크박스 유지
+if(document.getElementById("duch").innerHTML == "off"){
+    console.log(document.getElementById("duch").innerHTML)
+    checkbox.checked = false;
+}
+
+//구분 유지
+if(document.getElementById("seperated").innerHTML == "space"){
+    document.getElementById("comma").selected = false;
+    document.getElementById("space").selected = true;
+}
+
+
 function copy() {
     var obj = document.getElementById("result");
     var range = document.createRange();
@@ -96,3 +110,5 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
 });
+
+check();
