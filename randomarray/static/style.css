@@ -11760,12 +11760,15 @@ form{
 }
 
 #btnconvert{
-  display: block;
+  width: 100px;
   margin: 0 auto;
+  text-align: center;
   font-size: larger;
 }
 
 #convertbutton{
+  width: 100px;
+  margin: 0 auto;
   padding-top: 50px;
 }
 
@@ -11775,11 +11778,11 @@ form{
 
 #convertresult{
   width: 400px;
-  margin: 30px;
   border: 3px solid #dddddd;
   padding: 20px;
   word-wrap: break-word;
-  margin-left: 400px;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 #generatorinput{

@@ -1,7 +1,5 @@
 var before = document.getElementById("before")
-var after = document.getElementById("after")
 before.addEventListener("keyup",convertcheck);
-after.addEventListener("keyup",convertcheck);
 
 //진수변환기 유효성 검사
 function convertcheck(){
