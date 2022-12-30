@@ -55,18 +55,52 @@ def converter(request):
     if request.method == 'POST':
         # 10 진수 -> x 진수 
         if int(request.POST['before']) == 10:
-            result = convert(int(request.POST['beforeNum']), int(request.POST['after']))
-        else:
-            # x 진수 -> y 진수의 경우
-            first = convert(int(request.POST['beforeNum']), 10) # x 진수 -> 10 진수 
-            result = convert(first, int(request.POST['after'])) # 10 진수 -> y 진수
+            result = rebase_from10(int(request.POST['beforeNum']), int(request.POST['after']))
+        # else:
+        #     # x 진수 -> y 진수의 경우
+        #     first = convert(int(request.POST['beforeNum']), 10) # x 진수 -> 10 진수 
+        #     result = convert(first, int(request.POST['after'])) # 10 진수 -> y 진수
     return render(request, 'converter.html', {'result' : result})
 
-def convert(n, q):
-    r = ''
+
+# def convert(n, q):
+#     r = ''
     
-    while n > 0:
-        n, mod = divmod(n, q)
-        r += str(mod)
+#     while n > 0:
+#         n, mod = divmod(n, q)
+#         r += str(mod)
         
-    return r[::-1]
+#     return r[::-1]
+
+def rebase_from10(number, base):
+    digit_map = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    
+    if base < 2 or base < 36:
+        raise ValueError('Invalid base: 2 <= base <= 36')
+    
+    digits = from_base10(number, base)
+    encoding = encode(digits, digit_map)
+    
+    return encoding
+    
+def from_base10(n, b):
+    if b < 2:
+        raise ValueError('Base b must be >= 2')
+    if n < 0:
+        raise ValueError("Number n must be >= 0")
+    if n==0:
+        return [0]
+    digits = [ ]
+    while n > 0:
+        n, m = divmod(n,b)
+        digits.insert(0, m)
+    return digits
+
+def encode(digits, digit_map):
+    if max(digits) >= len(digit_map):
+        raise ValueError("digit map is not long enough to encode the digits")
+    
+    encoding = ''
+    for d in digits:
+        encoding += digit_map[d]
+    return encoding
