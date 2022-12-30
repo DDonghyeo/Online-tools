@@ -13,7 +13,6 @@ checkbox.addEventListener("click",check)
 
 //체크박스 유지
 if(document.getElementById("duch").innerHTML == "off"){
-    console.log(document.getElementById("duch").innerHTML)
     checkbox.checked = false;
 }
 
@@ -64,8 +63,6 @@ function check(){
 
     //최소값이 최대값보다 클 경우
     if(min>max){
-        console.log(min, max)
-        console.log(Number.isInteger(min))
         generate.disabled = true;
         warning.innerHTML = "min value is larger than max value."
         warning.style.display = "block"
