@@ -9,71 +9,70 @@
     <link href="/static/style.css" rel="stylesheet" type="text/css">
     <link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   </head>
-  <body>
-    <body class="sb-nav-fixed">
-      {% include "navbar.html" %}
-      <div id="layoutSidenav">
-          <div id="layoutSidenav_nav">
-              {% include "sidebar.html" %}
-          </div>
-          <div id="layoutSidenav_content">
-              <main>
-                <h1 id="main">Random Array Generator</h1>
-                <form action="" method="post" id="form">
-                  <div id="generatorinput">
-                    <div class="input-group input-group-sm mb-3">
-                      <span class="input-group-text" id="inputGroup-sizing-sm">min</span>
-                      <input id="min" name="min" type="text" placeholder="min" class="form-control" value={{min}}>
-                      <span class="input-group-text" id="inputGroup-sizing-sm" style="margin-left: 50px;">max</span>
-                      <input id="max" name="max" type="text" placeholder="max" class="form-control" value = {{max}}>
-                      <span class="input-group-text" id="inputGroup-sizing-sm"style="margin-left: 50px;" >amount</span>
-                      <input id="amount" name="amount" type="text" placeholder="amount" class="form-control" value = {{amount}}>
-                    </div>
+  <body class="sb-nav-fixed">
+    {% include "navbar.html" %}
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            {% include "sidebar.html" %}
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+              <h1 id="main">Random Array Generator</h1>
+              <form action="" method="post" id="form">
+                <div id="generatorinput">
+                  <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">min</span>
+                    <input id="min" name="min" type="text" placeholder="min" class="form-control" value={{min}}>
+                    <span class="input-group-text" id="inputGroup-sizing-sm" style="margin-left: 50px;">max</span>
+                    <input id="max" name="max" type="text" placeholder="max" class="form-control" value = {{max}}>
+                    <span class="input-group-text" id="inputGroup-sizing-sm"style="margin-left: 50px;" >amount</span>
+                    <input id="amount" name="amount" type="text" placeholder="amount" class="form-control" value = {{amount}}>
                   </div>
-                  <div id="generatorcheckbox" class="input-group mb-3">
-                    <div class="input-group-text">
-                      <p id="duch" style="display: none;">{{duplicate}}</p>
-                      <input class="form-check-input mt-0" type="checkbox" name = "duplicate" id = "checkbox" checked>Duplicate allow
-                    </div>
-                  </div>
-                  <div id="generatorselect" class="input-group mb-3">
-                    <label class="input-group-text" for="inputGroupSelect01">Type</label>
-                      <select class="form-select" name="type">
-                        <option value="int" selected>integer</option>
-                      </select>
-                  </div>
-                  <div id="generatorselect" class="input-group mb-3">
-                    <p id="seperated" style="display: none;">{{seperate}}</p>
-                    <label class="input-group-text" for="inputGroupSelect01">separate</label>
-                      <select class="form-select" name="separate">
-                        <option id="comma" value="comma" selected>comma(,)</option>
-                        <option id="space" value="space"> space( )</option>
-                      </select>
-                  </div>
-                  <p id="warning" style="display: none; color: lightcoral;" >warning</p>
-                  <div id="btngenerate">
-                    <button class="btn btn-primary btn-sm" id="generate" disabled>Genearate!</button>
-                  </div>
-                </form>
-              <div>
-                <h2 id="result-text">Result</h2>
-                <div class = "content" style="margin-left: 1000px ;">
-                  <button type="button" class="btn btn-primary btn-sm" id = "copy" value = "copy">
-                    <i class="fa-solid fa-copy fa-lg" ></i> copy
-                  </button>
                 </div>
-                <p id="result" style="width:90%; ">{{result}}</p>
-              </div>
-              </main>
-              <footer class="py-4 bg-light mt-auto">
-                  <div class="container-fluid px-4">
-                      <div class="d-flex align-items-center justify-content-between small">
-                          <div class="text-muted">Copyright &copy; Online tools 2022</div>
-                      </div>
+                <div id="generatorcheckbox" class="input-group mb-3">
+                  <div class="input-group-text">
+                    <p id="duch" style="display: none;">{{duplicate}}</p>
+                    <input class="form-check-input mt-0" type="checkbox" name = "duplicate" id = "checkbox" checked>Duplicate allow
                   </div>
-              </footer>
-          </div>
-      </div>
+                </div>
+                <div id="generatorselect" class="input-group mb-3">
+                  <label class="input-group-text" for="inputGroupSelect01">Type</label>
+                    <select class="form-select" name="type">
+                      <option value="int" selected>integer</option>
+                    </select>
+                </div>
+                <div id="generatorselect" class="input-group mb-3">
+                  <p id="seperated" style="display: none;">{{seperate}}</p>
+                  <label class="input-group-text" for="inputGroupSelect01">separate</label>
+                    <select class="form-select" name="separate">
+                      <option id="comma" value="comma" selected>comma(,)</option>
+                      <option id="space" value="space"> space( )</option>
+                    </select>
+                </div>
+                <p id="warning" style="display: none; color: lightcoral;" >warning</p>
+                <div id="btngenerate">
+                  <button class="btn btn-primary btn-sm" id="generate" disabled>Genearate!</button>
+                </div>
+              </form>
+            <div>
+              <h2 id="result-text">Result</h2>
+              <div class = "content" style="margin-left: 1000px ;">
+                <button type="button" class="btn btn-primary btn-sm" id = "copy" value = "copy">
+                  <i class="fa-solid fa-copy fa-lg" ></i> copy
+                </button>
+              </div>
+              <p id="result" style="width:90%; ">{{result}}</p>
+            </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Online tools 2022</div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
   </body>
   <script type="text/javascript" rel="javascript" src="/static/generator.js"></script>
 </html>

@@ -1,5 +1,5 @@
-<!doctype html>
-{% load static %}
+<!doctype html> 
+{% load static %} 
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,90 +9,69 @@
     <link href="/static/style.css" rel="stylesheet" type="text/css">
     <link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   </head>
-  <body>
-    <body class="sb-nav-fixed">
-      {% include "navbar.html" %}
-      <div id="layoutSidenav">
-          <div id="layoutSidenav_nav">
-              {% include "sidebar.html" %}
+  <body class="sb-nav-fixed"> {% include "navbar.html" %} <div id="layoutSidenav">
+      <div id="layoutSidenav_nav"> {% include "sidebar.html" %} </div>
+      <div id="layoutSidenav_content">
+        <main>
+          <h1 id="main">Binary Converter</h1>
+          <form action="" method="post" id="form">
+            <div id="convertinput" class="row">
+              <div class="col"><input type="text" class="form-control" id="beforeNum" name="beforeNum" placeholder="before" value={{before}}></div>
+            </div>
+            <div id="convertinput" class="row" style="margin-top: 50px;">
+              <div class="col"><select class="form-select convert-select" name="before">
+                  <option value="2">2진수</option>
+                  <option value="3">3진수</option>
+                  <option value="4">4진수</option>
+                  <option value="5">5진수</option>
+                  <option value="6">6진수</option>
+                  <option value="7">7진수</option>
+                  <option value="8">8진수</option>
+                  <option value="9">9진수</option>
+                  <option value="10" selected>10진수</option>
+                  <option value="11">11진수</option>
+                  <option value="12">12진수</option>
+                  <option value="13">13진수</option>
+                  <option value="14">14진수</option>
+                  <option value="15">15진수</option>
+                  <option value="16">16진수</option>
+                </select></div>
+              <div class="col"><i class="fa-solid fa-right-long"></i></div>
+              <div class="col"><select class="form-select convert-select" name="after">
+                  <option value="2" selected>2진수</option>
+                  <option value="3">3진수</option>
+                  <option value="4">4진수</option>
+                  <option value="5">5진수</option>
+                  <option value="6">6진수</option>
+                  <option value="7">7진수</option>
+                  <option value="8">8진수</option>
+                  <option value="9">9진수</option>
+                  <option value="10">10진수</option>
+                  <option value="11">11진수</option>
+                  <option value="12">12진수</option>
+                  <option value="13">13진수</option>
+                  <option value="14">14진수</option>
+                  <option value="15">15진수</option>
+                  <option value="16">16진수</option>
+                </select></div>
+            </div>
+            <div id="convertbutton"><button class="btn btn-primary btn-sm" id="btnconvert" disabled>covert!</button></div>
+          </form>
+          <div>
+            <h2 id="result-text" style="margin-top: 50px;">Result</h2>
+            <div class="content" style="margin-left: 700px ;"><button type="button" class="btn btn-primary btn-sm" id="copy" value="copy"><i class="fa-solid fa-copy fa-lg"></i> copy </button></div>
+            <p id="convertresult">{{result}}</p>
           </div>
-          <div id="layoutSidenav_content">
-              <main>
-                <h1 id="main">Binary Converter</h1>
-                <form action="" method="post" id="form">
-
-                  <div id="convertinput" class="row">
-                    <div class="col">
-                      <input type="text" class="form-control" id="beforeNum" name="beforeNum" placeholder="before" value = {{before}}>
-                    </div>
-                  </div>
-                  <div id="convertinput" class="row" style="margin-top: 50px;">
-                    <div class="col">
-                      <select class="form-select convert-select" name="before">
-                        <option value="2" >2진수</option>
-                        <option value="3" >3진수</option>
-                        <option value="4" >4진수</option>
-                        <option value="5" >5진수</option>
-                        <option value="6" >6진수</option>
-                        <option value="7" >7진수</option>
-                        <option value="8" >8진수</option>
-                        <option value="9" >9진수</option>
-                        <option value="10" selected>10진수</option>
-                        <option value="11" >11진수</option>
-                        <option value="12" >12진수</option>
-                        <option value="13" >13진수</option>
-                        <option value="14" >14진수</option>
-                        <option value="15" >15진수</option>
-                        <option value="16" >16진수</option>        
-                      </select>
-                    </div>
-                    <div class="col">
-                      <i class="fa-solid fa-right-long"></i>
-                    </div>
-                    <div class="col">
-                      <select class="form-select convert-select" name="after">
-                        <option value="2" selected>2진수</option>
-                        <option value="3" >3진수</option>
-                        <option value="4" >4진수</option>
-                        <option value="5" >5진수</option>
-                        <option value="6" >6진수</option>
-                        <option value="7" >7진수</option>
-                        <option value="8" >8진수</option>
-                        <option value="9" >9진수</option>
-                        <option value="10" >10진수</option>
-                        <option value="11" >11진수</option>
-                        <option value="12" >12진수</option>
-                        <option value="13" >13진수</option>
-                        <option value="14" >14진수</option>
-                        <option value="15" >15진수</option>
-                        <option value="16" >16진수</option>        
-                      </select>
-                    </div>
-                  </div>          
-                  <div id="convertbutton">
-                      <button class="btn btn-primary btn-sm" id="btnconvert" >covert!</button>
-                  </div>
-                </form>
-            
-              <div>
-                <h2 id="result-text" style="margin-top: 50px;">Result</h2>
-                <div class = "content" style="margin-left: 700px ;">
-                  <button type="button" class="btn btn-primary btn-sm" id = "copy" value = "copy">
-                    <i class="fa-solid fa-copy fa-lg" ></i> copy
-                  </button>
-                </div>
-                <p id="convertresult">{{result}}</p>
-              </div>
-              </main>
-              <footer class="py-4 bg-light mt-auto">
-                  <div class="container-fluid px-4">
-                      <div class="d-flex align-items-center justify-content-between small">
-                          <div class="text-muted">Copyright &copy; Online tools 2022</div>
-                      </div>
-                  </div>
-              </footer>
+        </main>
+        <footer class="py-4 bg-light mt-auto">
+          <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-between small">
+              <div class="text-muted">Copyright &copy; Online tools 2022</div>
+            </div>
           </div>
+        </footer>
       </div>
+    </div>
   </body>
-  <script type="text/javascript" rel="javascript" src="/static/script.js?ver=3.2"></script>
+  <script type="text/javascript" rel="javascript" src="/static/Converter.js"></script>
 </html>

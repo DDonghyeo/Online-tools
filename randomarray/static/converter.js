@@ -1,19 +1,24 @@
-var before = document.getElementById("before")
+var before = document.getElementById("beforeNum")
 var copybtn = document.getElementById("copy")
 
 copybtn.addEventListener("click",copy)
 before.addEventListener("keyup",convertcheck);
 
+function isInt(num){
+    return num %1 === 0;
+}
 //진수변환기 유효성 검사
 function convertcheck(){
-    var before = document.getElementById("before").value;
+    var before = document.getElementById("beforeNum").value;
     var btn = document.getElementById("btnconvert");
     if(before == ""){
         btn.disabled = true;
         return
     }else btn.disabled = false;
 
-    
+    if(isInt(before)){
+        btn.disabled = false;
+    }else btn.disabled = true;
 }
 
 
