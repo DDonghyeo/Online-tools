@@ -23,22 +23,13 @@
 
                   <div id="convertinput" class="row">
                     <div class="col">
-                      <input type="text" class="form-control" id="beforeNum" name="beforeNum" placeholder="before">
+                      <input type="text" class="form-control" id="beforeNum" name="beforeNum" placeholder="before" value = {{before}}>
                     </div>
-
-                    {% comment %} <div class="col">
-                      <i class="fa-solid fa-right-long"></i>
-                    </div>
-                    <div class="col">
-                      <input type="text" class="form-control" id="afterNum" name="afterNum" placeholder="after">
-                    </div> {% endcomment %}
-                    
                   </div>
-                  
                   <div id="convertinput" class="row" style="margin-top: 50px;">
                     <div class="col">
-                      <select class="form-select" name="before">
-                        <option value="2" selected>2진수</option>
+                      <select class="form-select convert-select" name="before">
+                        <option value="2" >2진수</option>
                         <option value="3" >3진수</option>
                         <option value="4" >4진수</option>
                         <option value="5" >5진수</option>
@@ -46,7 +37,7 @@
                         <option value="7" >7진수</option>
                         <option value="8" >8진수</option>
                         <option value="9" >9진수</option>
-                        <option value="10" >10진수</option>
+                        <option value="10" selected>10진수</option>
                         <option value="11" >11진수</option>
                         <option value="12" >12진수</option>
                         <option value="13" >13진수</option>
@@ -59,8 +50,8 @@
                       <i class="fa-solid fa-right-long"></i>
                     </div>
                     <div class="col">
-                      <select class="form-select" name="after">
-                        <option value="2" >2진수</option>
+                      <select class="form-select convert-select" name="after">
+                        <option value="2" selected>2진수</option>
                         <option value="3" >3진수</option>
                         <option value="4" >4진수</option>
                         <option value="5" >5진수</option>
@@ -68,7 +59,7 @@
                         <option value="7" >7진수</option>
                         <option value="8" >8진수</option>
                         <option value="9" >9진수</option>
-                        <option value="10" selected>10진수</option>
+                        <option value="10" >10진수</option>
                         <option value="11" >11진수</option>
                         <option value="12" >12진수</option>
                         <option value="13" >13진수</option>

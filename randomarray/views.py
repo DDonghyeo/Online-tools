@@ -61,6 +61,7 @@ def converter(request):
         #     # x 진수 -> y 진수의 경우
         #     first = convert(int(request.POST['beforeNum']), 10) # x 진수 -> 10 진수 
         #     result = convert(first, int(request.POST['after'])) # 10 진수 -> y 진수
+        return render(request, 'converter.html', {'result' : result, 'beforeNum' : request.POST['beforeNum']})
     return render(request, 'converter.html', {'result' : result})
 
 

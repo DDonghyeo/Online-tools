@@ -11759,6 +11759,14 @@ form{
     margin-left: 1000px ;
 }
 
+#beforeNum{
+  width: 200px;
+}
+
+.convert-select{
+  width: 100px
+}
+
 #btnconvert{
   width: 100px;
   margin: 0 auto;
