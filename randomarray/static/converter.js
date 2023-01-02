@@ -11,14 +11,11 @@ function isInt(num){
 function convertcheck(){
     var before = document.getElementById("beforeNum").value;
     var btn = document.getElementById("btnconvert");
+
     if(before == ""){
         btn.disabled = true;
         return
     }else btn.disabled = false;
-
-    if(isInt(before)){
-        btn.disabled = false;
-    }else btn.disabled = true;
 }
 convertcheck();
 

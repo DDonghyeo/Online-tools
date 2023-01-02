@@ -53,16 +53,19 @@ def generate(min, max, amount, separate, type, duplicate):
 @csrf_exempt
 def converter(request):
     result = ""
-    if request.method == 'POST':
-        # 10 진수 -> x 진수 
-        if int(request.POST['before']) == 10:
-            result = decimal_to_n_convert(int(request.POST['beforeNum']), int(request.POST['after']))
-        else:
-            # x 진수 -> y 진수의 경우
-            first = int(request.POST['beforeNum'], int(request.Post['before'])) # x 진수 -> 10 진수 
-            result = decimal_to_n_convert(first, int(request.POST['after'])) # 10 진수 -> y 진수
-        return render(request, 'converter.html', {'result' : result, 'beforeNum' : request.POST['beforeNum']})
-    return render(request, 'converter.html', {'result' : result})
+    try:
+        if request.method == 'POST':
+            # 10 진수 -> x 진수 
+            if int(request.POST['before']) == 10:
+                result = decimal_to_n_convert(int(request.POST['beforeNum']), int(request.POST['after']))
+            else:
+                # x 진수 -> y 진수의 경우
+                first = int(request.POST['beforeNum'], int(request.POST['before'])) # x 진수 -> 10 진수 
+                result = decimal_to_n_convert(first, int(request.POST['after'])) # 10 진수 -> y 진수
+            return render(request, 'converter.html', {'result' : result, 'beforeNum' : request.POST['beforeNum']})
+        return render(request, 'converter.html', {'result' : result})
+    except:
+        return render(request,'error.html')
 
 def decimal_to_n_convert(n, base):
     T = "0123456789ABCDEF"
