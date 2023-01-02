@@ -20,10 +20,11 @@ function convertcheck(){
         btn.disabled = false;
     }else btn.disabled = true;
 }
+convertcheck();
 
-
+//복사
 function copy() {
-    var obj = document.getElementById("result");
+    var obj = document.getElementById("convertresult");
     var range = document.createRange();
     range.selectNode(obj.childNodes[0]);  //텍스트 정보를 Range 객체에 저장
     var sel = window.getSelection();
@@ -48,3 +49,4 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
 });
+

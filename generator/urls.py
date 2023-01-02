@@ -6,5 +6,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
     path('randomarray/',views.generator),
-    path('binaryconverter/',views.converter)
+    path('binaryconverter/',views.converter),
+    path('powercalculator/',views.power)
 ]
